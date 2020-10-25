@@ -14,7 +14,7 @@ bot.on("message", (message) => {
         message.member.voice.channel.id
       );
       for (const [ _ , member] of channel.members) {
-        member.voice.setMute();
+        member.voice.setMute(true);
         message.reply("Shhhhhhhh!");
       }
     } else {
