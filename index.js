@@ -13,10 +13,10 @@ bot.on("message", (message) => {
       let channel = message.guild.channels.cache.get(
         message.member.voice.channel.id
       );
-      for (const [ _ , member] of channel.members) {
+      for (const [_, member] of channel.members) {
         member.voice.setMute(true);
-        message.reply("Shhhhhhhh!");
       }
+      message.reply("Shhhhhhhh!");
     } else {
       message.reply("You need to join a voice channel first!");
     }
@@ -25,10 +25,10 @@ bot.on("message", (message) => {
       let channel = message.guild.channels.cache.get(
         message.member.voice.channel.id
       );
-      for (const [ _, member] of channel.members) {
+      for (const [_, member] of channel.members) {
         member.voice.setMute(false);
-        message.reply("Who is the imposter!");
       }
+      message.reply("Who is the imposter!");
     } else {
       message.reply("You need to join a voice channel first!");
     }
@@ -38,9 +38,9 @@ bot.on("message", (message) => {
       !AU mute - to mute everyone in a voice channel.
       !AU unmute - to unmute everyone in a voice channel. 
       (You must be connected to a voice channel to use these commands)
-    `)
-  } else if ( message.content.startsWith(`!AU`)) {
-    message.reply('Try command, **!AU help** on how to use the bot');
+    `);
+  } else if (message.content.startsWith(`!AU`)) {
+    message.reply("Try command, **!AU help** on how to use the bot");
   }
 });
 
